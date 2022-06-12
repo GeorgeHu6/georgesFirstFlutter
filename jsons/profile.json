@@ -1,6 +1,6 @@
 {
     "user": "",
     "token": "",
-    "lastLogin": "",
-    "locale": ""
+    "cache": "$cacheConfig",
+    "lastLogin": ""
 }

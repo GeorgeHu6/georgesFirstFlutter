@@ -9,12 +9,14 @@ part of 'profile.dart';
 Profile _$ProfileFromJson(Map<String, dynamic> json) => Profile()
   ..user = json['user'] as String?
   ..token = json['token'] as String?
-  ..lastLogin = json['lastLogin'] as String?
-  ..locale = json['locale'] as String?;
+  ..cache = json['cache'] == null
+      ? null
+      : CacheConfig.fromJson(json['cache'] as Map<String, dynamic>)
+  ..lastLogin = json['lastLogin'] as String?;
 
 Map<String, dynamic> _$ProfileToJson(Profile instance) => <String, dynamic>{
       'user': instance.user,
       'token': instance.token,
+      'cache': instance.cache,
       'lastLogin': instance.lastLogin,
-      'locale': instance.locale,
     };
