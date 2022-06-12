@@ -1,6 +1,6 @@
 {
-    "user": "",
-    "token": "",
-    "cache": "$cacheConfig",
-    "lastLogin": ""
+    "user": "$User",
+    "token": "密码",
+    "lastLogin": " ",
+    "drinking_info": "$Drinking_info"
 }

@@ -3,16 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../models/cacheConfig.dart';
 import '../models/profile.dart';
 
 class Global {
   static late SharedPreferences _prefs;
 
   static Profile profile = Profile();
-
-  // 网络缓存对象
-  static NetCache netCache = NetCache();
 
   // 是否为release版
   static bool get isRelease => bool.fromEnvironment("dart.vm.product");
@@ -29,19 +25,7 @@ class Global {
       } catch (e) {
         print(e);
       }
-    } else {
-      // 默认主题索引为0，代表蓝色
-      profile = Profile()..theme = 0;
     }
-
-    // 如果没有缓存策略，设置默认缓存策略
-    profile.cache = profile.cache ?? CacheConfig()
-      ..enable = true
-      ..maxAge = 3600
-      ..maxCount = 100;
-
-    //初始化网络请求相关配置
-    Git.init();
   }
 
   // 持久化Profile信息

@@ -7,16 +7,14 @@ part of 'profile.dart';
 // **************************************************************************
 
 Profile _$ProfileFromJson(Map<String, dynamic> json) => Profile()
-  ..user = json['user'] as String?
+  ..user = json['user']
   ..token = json['token'] as String?
-  ..cache = json['cache'] == null
-      ? null
-      : CacheConfig.fromJson(json['cache'] as Map<String, dynamic>)
-  ..lastLogin = json['lastLogin'] as String?;
+  ..lastLogin = json['lastLogin'] as String?
+  ..drinking_info = json['drinking_info'];
 
 Map<String, dynamic> _$ProfileToJson(Profile instance) => <String, dynamic>{
       'user': instance.user,
       'token': instance.token,
-      'cache': instance.cache,
       'lastLogin': instance.lastLogin,
+      'drinking_info': instance.drinking_info,
     };

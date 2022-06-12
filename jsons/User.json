@@ -1,0 +1,9 @@
+{
+    "login": "用户名",
+    "avatar_url": "头像",
+    "location": "位置",
+    "email": "邮箱",
+    "bio": "简介",
+    "created_at": "创建于",
+    "updated_at": "更新于"
+}

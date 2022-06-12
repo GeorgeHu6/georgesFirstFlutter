@@ -27,7 +27,7 @@ void walk() {
       (map as Map<String, dynamic>).forEach((key, v) {
         if (key.startsWith("_")) return;
         //所有字段都定义为可空
-        attrs.write(getType(v, set, name)+"?");
+        attrs.write("${getType(v, set, name)}?");
         attrs.write(" ");
         attrs.write(key);
         attrs.writeln(";");

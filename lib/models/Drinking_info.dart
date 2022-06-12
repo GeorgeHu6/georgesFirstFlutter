@@ -6,7 +6,7 @@ part 'Drinking_info.g.dart';
 class Drinking_info {
   Drinking_info();
 
-  factory Drinking_info.fromJson(Map<String, dynamic> json) =>
-      _$Drinking_infoFromJson(json);
+  
+  factory Drinking_info.fromJson(Map<String,dynamic> json) => _$Drinking_infoFromJson(json);
   Map<String, dynamic> toJson() => _$Drinking_infoToJson(this);
 }

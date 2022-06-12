@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../models/profile.dart';
 import 'Global.dart';
+import '../models/profile.dart';
+import '../models/User.dart';
 
 class ProfileChangeNotifier extends ChangeNotifier {
   Profile get _profile => Global.profile;
@@ -22,7 +23,7 @@ class UserModel extends ProfileChangeNotifier {
   //用户信息发生变化，更新用户信息并通知依赖它的子孙Widgets更新
   set user(User user) {
     if (user?.login != _profile.user?.login) {
-      _profile.lastLogin = _profile.user?.login;
+      _profile.lastLogin = _profile.user?.login!;
       _profile.user = user;
       notifyListeners();
     }
