@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'Drinking_info.dart';
+part of 'drinkingInfo.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Drinking_info _$Drinking_infoFromJson(Map<String, dynamic> json) =>
-    Drinking_info();
+DrinkingInfo _$DrinkingInfoFromJson(Map<String, dynamic> json) =>
+    DrinkingInfo();
 
-Map<String, dynamic> _$Drinking_infoToJson(Drinking_info instance) =>
+Map<String, dynamic> _$DrinkingInfoToJson(DrinkingInfo instance) =>
     <String, dynamic>{};

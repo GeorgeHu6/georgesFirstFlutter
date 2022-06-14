@@ -1,6 +1,6 @@
 {
-    "user": "$User",
+    "user": "$userInfo",
     "token": "密码",
     "lastLogin": " ",
-    "drinking_info": "$Drinking_info"
+    "drinkingInfo": "$drinkingInfo"
 }
