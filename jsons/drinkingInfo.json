@@ -1,3 +1,18 @@
 {
-
+    "age": "",
+    "height": "",
+    "weight": "",
+    "drinkWaterToday": "",
+    "calories": "",
+    "schedule": [{
+            "time": "1655367689",
+            "capacity": "500ml",
+            "description": "果汁"
+        },
+        {
+            "time": "",
+            "capacity": "",
+            "description": ""
+        }
+    ]
 }
