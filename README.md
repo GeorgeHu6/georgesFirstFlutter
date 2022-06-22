@@ -4,20 +4,23 @@ A new Flutter project.
 
 ## tree
 
-jsons
-├─ drinkingInfo.json
-├─ profile.json
-└─ userInfo.json
+jsons                 
+├─ drinkingInfo.json  
+├─ profile.json       
+└─ userInfo.json      
 
+lib                                  
+├─ common                            
+│  ├─ Global.dart                    
+│  └─ UserModel.dart                 
+├─ models                                                     
+├─ routes                
+│  └─ home_page.dart                 
+├─ states                                            
+├─ widgets                           
+│  └─ Button.dart                    
+└─ main.dart                         
 
-
-lib
-├─ common
-├─ models 
-├─ routes
-├─ states
-├─ widgets
-└─ main.dart
 
 
 | 文件夹  | 作用                                                         |
