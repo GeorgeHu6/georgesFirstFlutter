@@ -70,6 +70,9 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:   
     - assets/小女孩头像.svg
+    - assets/喝水小人.svg
+    - assets/小男孩头像.svg
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
