@@ -4,6 +4,7 @@ import 'common/Global.dart';
 import 'common/UserModel.dart';
 import 'routes/personal_center.dart';
 import 'routes/home_page.dart';
+import 'package:team_work/routes/neighbor.dart';
 
 void main() {
   Global.init().then(
@@ -36,6 +37,24 @@ class MyWidget extends StatelessWidget {
   }
 }
 
+class MyNeighbor extends StatelessWidget {
+  const MyNeighbor({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyApp(),
+      routes: {
+        // "login": (context) => LoginRoute(),
+        // "themes": (context) => ThemeChangeRoute(),
+        // "language": (context) => LanguageRoute(),
+        "neighbor": (context) => Neighbor(),
+      },
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
 // The main App widget
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -46,7 +65,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _selectedIndex = 0;
-  final List _pageList = [HomePage(), PersonRoute()];
+  final List _pageList = [HomePage(), PersonRoute(),Neighbor()];
   var _titleName = 'HomePage';
 
   @override
@@ -79,8 +98,12 @@ class _MyAppState extends State<MyApp> {
           break;
         case 1:
           _titleName = 'Personal Center';
+          break;
+        case 2:
+          _titleName = 'Neightbor';
+          break;
       }
-      
+
       // Navigator.popAndPushNamed(context, 'personal_center');
     });
   }
