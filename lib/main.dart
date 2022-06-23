@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'common/Global.dart';
 import 'common/UserModel.dart';
 import 'routes/home_page.dart';
+import 'routes/personal_center.dart';
 
 void main() {
   Global.init().then((e) => runApp(MyApp()));
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
           // "login": (context) => LoginRoute(),
           // "themes": (context) => ThemeChangeRoute(),
           // "language": (context) => LanguageRoute(),
+          "personal_center": (context) => PersonRoute(),
         },
       ),
     );
