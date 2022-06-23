@@ -22,7 +22,7 @@ class _PersonRouteState extends State<PersonRoute> {
       children: [
         Container(
           width: 3200,
-          height: 13,
+          height: 30,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -54,7 +54,7 @@ class _PersonRouteState extends State<PersonRoute> {
               width: 80,
               height: 80,
               decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
+                  color: Color.fromARGB(100, 176, 217, 228),
                   borderRadius: BorderRadius.all(Radius.circular(1000.0))),
               child: set,
             ),
@@ -71,68 +71,73 @@ class _PersonRouteState extends State<PersonRoute> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //Padding(padding: EdgeInsets.only(right: 70)),
-            Text(
-              "368",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 12, 99, 169),
-                  fontSize: 17.0,
-                  height: 1.1),
+            Column(
+              children: [
+                Text(
+                  "368",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 12, 99, 169),
+                      fontSize: 17.0,
+                      height: 1.1),
+                ),
+                Text(
+                  "关注",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 12, 99, 169),
+                      fontSize: 11.0,
+                      height: 1.0),
+                ),
+              ],
             ),
             Padding(padding: EdgeInsets.only(right: 60)),
-            Text(
-              "78836",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 12, 99, 169),
-                  fontSize: 17.0,
-                  height: 1.1),
+            Column(
+              children: [
+                Text(
+                  "78836",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 12, 99, 169),
+                      fontSize: 17.0,
+                      height: 1.1),
+                ),
+                Text(
+                  "粉丝",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 12, 99, 169),
+                      fontSize: 11.0,
+                      height: 1.0),
+                ),
+              ],
             ),
+
             Padding(padding: EdgeInsets.only(right: 60)),
-            Text(
-              "265",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 12, 99, 169),
-                  fontSize: 17.0,
-                  height: 1.1),
+            Column(
+              children: [
+                Text(
+                  "265",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 12, 99, 169),
+                      fontSize: 17.0,
+                      height: 1.1),
+                ),
+                Text(
+                  "收藏",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 12, 99, 169),
+                      fontSize: 11.0,
+                      height: 1.0),
+                ),
+              ],
             ),
           ],
         ),
         Padding(padding: EdgeInsets.symmetric(vertical: 2)),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Padding(padding: EdgeInsets.only(right: 52)),
-            Text(
-              "关注",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 12, 99, 169),
-                  fontSize: 11.0,
-                  height: 1.0),
-            ),
-            Padding(padding: EdgeInsets.only(right: 80)),
-            Text(
-              "粉丝",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 12, 99, 169),
-                  fontSize: 11.0,
-                  height: 1.0),
-            ),
-            Padding(padding: EdgeInsets.only(right: 90)),
-            Text(
-              "收藏",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 12, 99, 169),
-                  fontSize: 11.0,
-                  height: 1.0),
-            ),
-          ],
-        ),
         Padding(padding: EdgeInsets.symmetric(vertical: 5)),
         Padding(padding: EdgeInsets.only(right: 70)),
         Container(
           width: 350,
           height: 110,
           decoration: BoxDecoration(
-              color: Colors.lightBlueAccent,
+              color:  Color.fromARGB(100, 176, 217, 228),
               borderRadius: BorderRadius.all(Radius.circular(15.0))),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -141,66 +146,73 @@ class _PersonRouteState extends State<PersonRoute> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.photo,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
+                  Padding(padding: EdgeInsets.only(right: 40)),
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.photo,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "日常记录",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
-                  Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.local_grocery_store,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
+                  Padding(padding: EdgeInsets.only(right: 40)),
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.local_grocery_store,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "购物车",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
-                  Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.sentiment_satisfied,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
+                  Padding(padding: EdgeInsets.only(right: 40)),
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.sentiment_satisfied,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "我的最爱",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
-                  Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.schedule,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(padding: EdgeInsets.only(right: 53)),
-                  Text(
-                    "日常记录",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
-                  ),
-                  Padding(padding: EdgeInsets.only(right: 60)),
-                  Text(
-                    "购物车",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
-                  ),
-                  Padding(padding: EdgeInsets.only(right: 62)),
-                  Text(
-                    "我的最爱",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
-                  ),
-                  Padding(padding: EdgeInsets.only(right: 62)),
-                  Text(
-                    "历史",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
+                  Padding(padding: EdgeInsets.only(right: 40)),
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.schedule,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "历史",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -208,69 +220,77 @@ class _PersonRouteState extends State<PersonRoute> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.receipt,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
+                  Padding(padding: EdgeInsets.only(right: 42)),
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.receipt,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "优惠券",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
                   Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.local_mall,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.local_mall,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "商城",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
                   Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.message,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.message,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "消息",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
                   Padding(padding: EdgeInsets.only(right: 50)),
-                  Icon(
-                    Icons.star_border,
-                    color: Color.fromARGB(255, 6, 101, 179),
-                    size: 28,
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.star_border,
+                        color: Color.fromARGB(255, 6, 101, 179),
+                        size: 28,
+                      ),
+                      Text(
+                        "评价",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            fontSize: 11.0,
+                            height: 1.0),
+                      ),
+                    ],
                   ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(padding: EdgeInsets.only(right: 53)),
-                  Text(
-                    "优惠券",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
-                  ),
-                  Padding(padding: EdgeInsets.only(right: 68)),
-                  Text(
-                    "商城",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
-                  ),
-                  Padding(padding: EdgeInsets.only(right: 68)),
-                  Text(
-                    "消息",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
-                  ),
-                  Padding(padding: EdgeInsets.only(right: 68)),
-                  Text(
-                    "评价",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 12, 99, 169),
-                        fontSize: 11.0,
-                        height: 1.0),
-                  ),
-                ],
-              ),
+              
             ],
           ),
         ),
