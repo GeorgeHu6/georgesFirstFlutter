@@ -30,3 +30,7 @@ lib
 | states  | 保存APP中需要跨组件共享的状态类                              |
 | routes  | 存放所有路由页面类                                           |
 | widgets | APP内封装的一些Widget组件都在该目录下                        |
+
+
+## prototype
+[prototype](https://modao.cc/app/ULkPc5lKrdbjprdQSKRNvq)
