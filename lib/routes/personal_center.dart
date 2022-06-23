@@ -13,12 +13,7 @@ class PersonRoute extends StatefulWidget {
 class _PersonRouteState extends State<PersonRoute> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '饮水APP',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('个人中心'),
           elevation: 30.0, //设置标题阴影 不需要的话值设置成 0.0
@@ -27,7 +22,6 @@ class _PersonRouteState extends State<PersonRoute> {
             IconButton(icon: Icon(Icons.settings), onPressed: () {}),
           ],
         ),
-      ),
-    );
+      );
   }
 }

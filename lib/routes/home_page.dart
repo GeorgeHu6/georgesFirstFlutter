@@ -3,41 +3,23 @@ import 'package:provider/provider.dart';
 import 'package:team_work/common/UserModel.dart';
 import 'package:team_work/models/userInfo.dart';
 
-class HomeRoute extends StatefulWidget {
-  const HomeRoute({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomeRouteState createState() => _HomeRouteState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeRouteState extends State<HomeRoute> {
-  var _selectedIndex;
-
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(Provider.of<UserModel>(context).isLogin
-            ? Provider.of<UserModel>(context).user!.login!
-            : 'Flutter Demo'),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        // 底部导航
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: '状态'),
-          BottomNavigationBarItem(icon: Icon(Icons.announcement), label: '信息'),
-          BottomNavigationBarItem(icon: Icon(Icons.link), label: '连接'),
-        ],
-        currentIndex: _selectedIndex,
-        fixedColor: Colors.blue,
-        onTap: _onItemTapped,
+    return Center(
+      child: Container(
+        child: SizedBox(
+          height: 10,
+          width: 10,
+        ),
       ),
     );
-  }
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
   }
 }
