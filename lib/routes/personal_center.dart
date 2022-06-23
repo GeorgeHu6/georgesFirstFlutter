@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -16,35 +17,39 @@ class PersonRoute extends StatefulWidget {
 class _PersonRouteState extends State<PersonRoute> {
   @override
   Widget build(BuildContext context) {
-     SvgPicture set = new SvgPicture.asset("assets/小女孩头像.svg");
-    return  Column(
+    SvgPicture set = new SvgPicture.asset("assets/小女孩头像.svg");
+    return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Icon(Icons.border_all, color: Colors.lightBlue),
-            Padding(
-              padding: EdgeInsets.only(right: 145),
-            ),
-            Text(
-              "个人中心",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.lightBlue, fontSize: 18),
-            ),
-            Padding(
-              padding: EdgeInsets.only(right: 120),
-            ),
-            Icon(
-              Icons.settings,
-              color: Colors.lightBlue,
-            ),
-          ],
+        Container(
+          width: 3200,
+          height: 13,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.border_all, color: Colors.lightBlue),
+              Padding(
+                padding: EdgeInsets.only(right: 100),
+              ),
+              Text(
+                "个人中心",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.lightBlue, fontSize: 18),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 120),
+              ),
+              Icon(
+                Icons.settings,
+                color: Colors.lightBlue,
+              ),
+            ],
+          ),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: EdgeInsets.only(right: 50)),
-            Padding(padding: EdgeInsets.symmetric(vertical: 60)),
+            //Padding(padding: EdgeInsets.only(left: 100)),
+            Padding(padding: EdgeInsets.symmetric(vertical: 50)),
             Container(
               width: 80,
               height: 80,
@@ -63,9 +68,9 @@ class _PersonRouteState extends State<PersonRoute> {
           ],
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: EdgeInsets.only(right: 50)),
+            //Padding(padding: EdgeInsets.only(right: 70)),
             Text(
               "368",
               style: TextStyle(
@@ -73,7 +78,7 @@ class _PersonRouteState extends State<PersonRoute> {
                   fontSize: 17.0,
                   height: 1.1),
             ),
-            Padding(padding: EdgeInsets.only(right: 70)),
+            Padding(padding: EdgeInsets.only(right: 60)),
             Text(
               "78836",
               style: TextStyle(
@@ -81,7 +86,7 @@ class _PersonRouteState extends State<PersonRoute> {
                   fontSize: 17.0,
                   height: 1.1),
             ),
-            Padding(padding: EdgeInsets.only(right: 70)),
+            Padding(padding: EdgeInsets.only(right: 60)),
             Text(
               "265",
               style: TextStyle(
@@ -93,9 +98,9 @@ class _PersonRouteState extends State<PersonRoute> {
         ),
         Padding(padding: EdgeInsets.symmetric(vertical: 2)),
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: EdgeInsets.only(right: 52)),
+            // Padding(padding: EdgeInsets.only(right: 52)),
             Text(
               "关注",
               style: TextStyle(
@@ -121,26 +126,151 @@ class _PersonRouteState extends State<PersonRoute> {
             ),
           ],
         ),
-        Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-         Padding(padding: EdgeInsets.only(right: 70)),
+        Padding(padding: EdgeInsets.symmetric(vertical: 5)),
+        Padding(padding: EdgeInsets.only(right: 70)),
         Container(
-          width: 360,
-          height: 150,
+          width: 350,
+          height: 110,
           decoration: BoxDecoration(
               color: Colors.lightBlueAccent,
               borderRadius: BorderRadius.all(Radius.circular(15.0))),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Padding(padding: EdgeInsets.symmetric(vertical: 10)),
+              Padding(padding: EdgeInsets.symmetric(vertical: 5)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  Padding(padding: EdgeInsets.only(right: 50)),
                   Icon(
                     Icons.photo,
                     color: Color.fromARGB(255, 6, 101, 179),
-                  )
+                    size: 28,
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 50)),
+                  Icon(
+                    Icons.local_grocery_store,
+                    color: Color.fromARGB(255, 6, 101, 179),
+                    size: 28,
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 50)),
+                  Icon(
+                    Icons.sentiment_satisfied,
+                    color: Color.fromARGB(255, 6, 101, 179),
+                    size: 28,
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 50)),
+                  Icon(
+                    Icons.schedule,
+                    color: Color.fromARGB(255, 6, 101, 179),
+                    size: 28,
+                  ),
                 ],
-              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(padding: EdgeInsets.only(right: 53)),
+                  Text(
+                    "日常记录",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 60)),
+                  Text(
+                    "购物车",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 62)),
+                  Text(
+                    "我的最爱",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 62)),
+                  Text(
+                    "历史",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                ],
+              ),
+              Padding(padding: EdgeInsets.symmetric(vertical: 5)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(padding: EdgeInsets.only(right: 50)),
+                  Icon(
+                    Icons.receipt,
+                    color: Color.fromARGB(255, 6, 101, 179),
+                    size: 28,
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 50)),
+                  Icon(
+                    Icons.local_mall,
+                    color: Color.fromARGB(255, 6, 101, 179),
+                    size: 28,
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 50)),
+                  Icon(
+                    Icons.message,
+                    color: Color.fromARGB(255, 6, 101, 179),
+                    size: 28,
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 50)),
+                  Icon(
+                    Icons.star_border,
+                    color: Color.fromARGB(255, 6, 101, 179),
+                    size: 28,
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(padding: EdgeInsets.only(right: 53)),
+                  Text(
+                    "优惠券",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 68)),
+                  Text(
+                    "商城",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 68)),
+                  Text(
+                    "消息",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 68)),
+                  Text(
+                    "评价",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 99, 169),
+                        fontSize: 11.0,
+                        height: 1.0),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -148,4 +278,3 @@ class _PersonRouteState extends State<PersonRoute> {
     );
   }
 }
-
