@@ -31,10 +31,12 @@ class MyWidget extends StatelessWidget {
         // "language": (context) => LanguageRoute(),
         "personal_center": (context) => PersonRoute(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
+// The main App widget
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -44,19 +46,20 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _selectedIndex = 0;
-  final List _pageList = [];
+  final List _pageList = [HomePage(), PersonRoute()];
+  var _titleName = 'HomePage';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Demo'),
+        title: Text(_titleName),
       ),
-      body: HomePage(),
+      body: _pageList[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         // 底部导航
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: '状态'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
           BottomNavigationBarItem(icon: Icon(Icons.announcement), label: '信息'),
           BottomNavigationBarItem(icon: Icon(Icons.link), label: '连接'),
         ],
@@ -70,7 +73,15 @@ class _MyAppState extends State<MyApp> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      Navigator.pushNamed(context, 'personal_center');
+      switch (index) {
+        case 0:
+          _titleName = 'HomePage';
+          break;
+        case 1:
+          _titleName = 'Personal Center';
+      }
+      
+      // Navigator.popAndPushNamed(context, 'personal_center');
     });
   }
 }
