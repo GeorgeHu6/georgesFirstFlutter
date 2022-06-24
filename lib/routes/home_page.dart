@@ -62,6 +62,7 @@ class _InfoDisplayState extends State<InfoDisplay> {
   }
 }
 
+// 下方的两块卡片
 class InfoContent extends StatefulWidget {
   const InfoContent({Key? key}) : super(key: key);
 
