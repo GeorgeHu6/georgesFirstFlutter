@@ -83,7 +83,7 @@ class _MyAppState extends State<MyApp> {
           BottomNavigationBarItem(icon: Icon(Icons.link), label: '连接'),
         ],
         currentIndex: _selectedIndex,
-        fixedColor: Colors.blue,
+        fixedColor: Color.fromARGB(250, 32, 94, 151),
         onTap: _onItemTapped,
       ),
     );

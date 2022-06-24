@@ -44,8 +44,8 @@ class _InfoDisplayState extends State<InfoDisplay> {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset('imgs/ruler.png', width: 150),
-        Image.asset('imgs/bottle.png', width: 200),
+        Image.asset('assets/ruler.png', width: 150),
+        Image.asset('assets/bottle.png', width: 200),
         Flex(
           direction: Axis.vertical,
           children: [
