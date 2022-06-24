@@ -22,7 +22,7 @@ class _PersonRouteState extends State<PersonRoute> {
     return ListView(
       children: [
         Container(
-          height: 800,
+          height: 700,
           child: Column(
             children: [
               Container(
@@ -31,7 +31,10 @@ class _PersonRouteState extends State<PersonRoute> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.border_all, color: Colors.lightBlue),
+                    IconButton(
+                      icon: Icon(Icons.border_all, color: Colors.lightBlue),
+                      onPressed: () {},
+                    ),
                     Padding(
                       padding: EdgeInsets.only(right: 100),
                     ),
@@ -43,9 +46,12 @@ class _PersonRouteState extends State<PersonRoute> {
                     Padding(
                       padding: EdgeInsets.only(right: 120),
                     ),
-                    Icon(
-                      Icons.settings,
-                      color: Colors.lightBlue,
+                    IconButton(
+                      icon: Icon(
+                        Icons.settings,
+                        color: Colors.lightBlue,
+                      ),
+                      onPressed: () {},
                     ),
                   ],
                 ),
@@ -472,28 +478,90 @@ class _PersonRouteState extends State<PersonRoute> {
                 ],
               ),
               Padding(padding: EdgeInsets.symmetric(vertical: 1)),
-              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                      width: 165,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(100, 176, 217, 228),
-                        borderRadius: BorderRadius.all(Radius.circular(15.0))
+                  Column(
+                    children: [
+                      Container(
+                        width: 165,
+                        height: 100,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(100, 176, 217, 228),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15.0))),
+                        child: Image.asset('assets/小男孩.png', width: 80),
                       ),
-                      child: set,
+                      Container(
+                        width: 165,
+                        height: 30,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            borderRadius: BorderRadius.vertical(
+                                bottom: Radius.circular(12.0))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(padding: EdgeInsets.only(right: 40)),
+                            Text(
+                              "Jenifer",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 9.0,
+                                  height: 1.0),
+                            ),
+                            Padding(padding: EdgeInsets.only(right: 50)),
+                            Icon(
+                              Icons.sentiment_satisfied,
+                              color: Colors.white,
+                              size: 12.0,
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Padding(padding: EdgeInsets.only(right: 20)),
+                  Column(
+                    children: [
+                      Container(
+                        width: 165,
+                        height: 100,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(100, 176, 217, 228),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15.0))),
+                        child: Image.asset('assets/男医生.png', width: 80),
                       ),
-                       Padding(padding: EdgeInsets.only(right: 20)),
-                  Container(
-                      width: 165,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(100, 176, 217, 228),
-                        borderRadius: BorderRadius.all(Radius.circular(15.0))
-                      ),
-                      child: set),
+                      Container(
+                        width: 165,
+                        height: 30,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 12, 99, 169),
+                            borderRadius: BorderRadius.vertical(
+                                bottom: Radius.circular(12.0))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(padding: EdgeInsets.only(right: 40)),
+                            Text(
+                              "Rose",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 9.0,
+                                  height: 1.0),
+                            ),
+                            Padding(padding: EdgeInsets.only(right: 50)),
+                            Icon(
+                              Icons.sentiment_satisfied,
+                              color: Colors.white,
+                              size: 12.0,
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ],
               )
             ],
