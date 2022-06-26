@@ -1,10 +1,6 @@
-import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:team_work/common/UserModel.dart';
-import 'package:team_work/models/userInfo.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PersonRoute extends StatefulWidget {
