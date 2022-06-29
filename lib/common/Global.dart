@@ -20,7 +20,7 @@ class Global {
     _prefs = await SharedPreferences.getInstance();
     var _profile = _prefs.getString("profile");
 
-    if (_profile != null && false) {
+    if (_profile != null) {
       try {
         profile = Profile.fromJson(jsonDecode(_profile));
       } catch (e) {
@@ -29,7 +29,6 @@ class Global {
     } else {
       gitGet().then((value) {
         profile = Profile.fromJson(jsonDecode(value));
-        print(value);
       });
     }
   }
