@@ -1,8 +1,8 @@
 {
-    "age": "",
-    "height": "",
-    "weight": "",
-    "drinkWaterToday": "",
+    "age": 20,
+    "height": 175,
+    "weight": 65,
+    "drinkWaterToday":1500 ,
     "calories": "",
     "schedule": [{
             "time": "1655367689",
