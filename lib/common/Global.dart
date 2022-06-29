@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/profile.dart';
+import 'git_get.dart';
 
 class Global {
   static late SharedPreferences _prefs;
@@ -19,12 +20,17 @@ class Global {
     _prefs = await SharedPreferences.getInstance();
     var _profile = _prefs.getString("profile");
 
-    if (_profile != null) {
+    if (_profile != null && false) {
       try {
         profile = Profile.fromJson(jsonDecode(_profile));
       } catch (e) {
         print(e);
       }
+    } else {
+      gitGet().then((value) {
+        profile = Profile.fromJson(jsonDecode(value));
+        print(value);
+      });
     }
   }
 
