@@ -10,5 +10,11 @@
     },
     "token": null,
     "lastLogin": null,
-    "drinkingInfo": null
+    "drinkingInfo": {
+        "age": 20,
+        "height": 175,
+        "weight": 65,
+        "drinkWaterToday":1500 ,
+        "calories": 5
+    }
 }

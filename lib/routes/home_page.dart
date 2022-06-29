@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../models/drinkingInfo.dart';
+
+DrinkingInfo drinkingInfo = DrinkingInfo();
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,8 +38,18 @@ class InfoDisplay extends StatefulWidget {
 }
 
 class _InfoDisplayState extends State<InfoDisplay> {
+  late SharedPreferences _prefs;
   var _todayWaterDrunk = 0;
   var _todayCalorios = 0;
+  var _drinkinfo = "";
+  DrinkingInfo drinkingInfo = DrinkingInfo();
+
+  void initState() async {
+    super.initState();
+    _prefs = await SharedPreferences.getInstance();
+    print(_prefs.getString('drinkingInfo'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
