@@ -11,17 +11,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Flex(
-      direction: Axis.vertical,
-      //crossAxisAlignment: CrossAxisAlignment.center,
-      // mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
-        InfoDisplay(),
-        SizedBox(
-          height: 50,
-        ),
-        InfoContent()
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          InfoDisplay(),
+          SizedBox(
+            height: 50,
+          ),
+          InfoContent()
+        ],
+      ),
     );
   }
 }
