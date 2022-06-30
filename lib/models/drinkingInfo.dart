@@ -6,11 +6,11 @@ part 'drinkingInfo.g.dart';
 class DrinkingInfo {
   DrinkingInfo();
 
-  String? age;
-  String? height;
-  String? weight;
-  String? drinkWaterToday;
-  String? calories;
+  int? age;
+  double? height;
+  double? weight;
+  double? drinkWaterToday;
+  int? calories;
 
   factory DrinkingInfo.fromJson(Map<String, dynamic> json) =>
       _$DrinkingInfoFromJson(json);

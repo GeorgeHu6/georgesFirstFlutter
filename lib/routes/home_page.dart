@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:provider/provider.dart';
+import 'package:team_work/common/UserModel.dart';
 import '../models/drinkingInfo.dart';
 
 
@@ -37,12 +39,16 @@ class InfoDisplay extends StatefulWidget {
 }
 
 class _InfoDisplayState extends State<InfoDisplay> {
-  late SharedPreferences _prefs;
-  var _todayWaterDrunk = 0;
-  var _todayCalorios = 0;
+  double? _todayWaterDrunk = 0;
+  int? _todayCalorios = 0;
 
   @override
   Widget build(BuildContext context) {
+    var drinkInfo = Provider.of<UserModel>(context).drinkingInfo;
+    setState(() {
+      _todayCalorios = drinkInfo?.calories;
+      _todayWaterDrunk = drinkInfo?.drinkWaterToday;
+    });
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -75,12 +81,18 @@ class InfoContent extends StatefulWidget {
 }
 
 class _InfoContent extends State<InfoContent> {
-  var _age = 0;
-  var _height = 0;
-  var _weight = 0;
-  var _score = 60;
+  int? _age = 0;
+  double? _height = 0;
+  double? _weight = 0;
+  var _score = 80;
   @override
   Widget build(BuildContext context) {
+    var drinkInfo = Provider.of<UserModel>(context).drinkingInfo;
+    setState(() {
+      _age = drinkInfo?.age;
+      _height = drinkInfo?.height;
+      _weight = drinkInfo?.weight;
+    });
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -156,7 +168,7 @@ class _InfoContent extends State<InfoContent> {
             radius: 60.0,
             lineWidth: 10.0,
             percent: _score / 100,
-            center: Text("$_score分"),
+            center: Text("$_score分", style: const TextStyle(fontSize: 20.0),),
             progressColor: Colors.blue,
           ),
         ),

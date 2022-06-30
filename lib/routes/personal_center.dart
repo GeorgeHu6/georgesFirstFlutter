@@ -1,6 +1,7 @@
-import 'dart:ui';
-
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
+import '../common/UserModel.dart';
+import '../models/userInfo.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PersonRoute extends StatefulWidget {
@@ -11,8 +12,13 @@ class PersonRoute extends StatefulWidget {
 }
 
 class _PersonRouteState extends State<PersonRoute> {
+  String? _username = "Jeremy Zucker";
   @override
   Widget build(BuildContext context) {
+    var userinfo = Provider.of<UserModel>(context).user;
+    setState(() {
+      _username = userinfo?.login;
+    });
     SvgPicture set = new SvgPicture.asset("assets/小女孩头像.svg");
     SvgPicture set1 = new SvgPicture.asset("assets/男医生.svg");
     return ListView(
@@ -67,7 +73,7 @@ class _PersonRouteState extends State<PersonRoute> {
                     child: set,
                   ),
                   Padding(padding: EdgeInsets.only(right: 20)),
-                  Text("Jeremy Zucker",
+                  Text("$_username",
                       style: TextStyle(
                         color: Color.fromARGB(255, 12, 99, 169),
                         fontSize: 18.0,

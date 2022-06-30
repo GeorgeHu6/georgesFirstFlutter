@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:team_work/models/drinkingInfo.dart';
 
 import '../models/userInfo.dart';
 import 'Global.dart';
@@ -17,9 +18,11 @@ class ProfileChangeNotifier extends ChangeNotifier {
 
 class UserModel extends ProfileChangeNotifier {
   UserInfo? get user => _profile.user;
+  DrinkingInfo? get drinkingInfo => _profile.drinkingInfo;
 
   // APP是否登录(如果有用户信息，则证明登录过)
   bool get isLogin => user != null;
+
 
   //用户信息发生变化，更新用户信息并通知依赖它的子孙Widgets更新
   set user(UserInfo? user) {
