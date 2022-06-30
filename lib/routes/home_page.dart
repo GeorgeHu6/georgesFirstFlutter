@@ -41,14 +41,6 @@ class _InfoDisplayState extends State<InfoDisplay> {
   late SharedPreferences _prefs;
   var _todayWaterDrunk = 0;
   var _todayCalorios = 0;
-  var _drinkinfo = "";
-  DrinkingInfo drinkingInfo = DrinkingInfo();
-
-  void initState() async {
-    super.initState();
-    _prefs = await SharedPreferences.getInstance();
-    print(_prefs.getString('drinkingInfo'));
-  }
 
   @override
   Widget build(BuildContext context) {
