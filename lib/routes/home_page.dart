@@ -3,7 +3,6 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/drinkingInfo.dart';
 
-DrinkingInfo drinkingInfo = DrinkingInfo();
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
