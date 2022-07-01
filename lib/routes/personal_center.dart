@@ -24,7 +24,7 @@ class _PersonRouteState extends State<PersonRoute> {
     return ListView(
       children: [
         Container(
-          height: 700,
+          height: 550,
           child: Column(
             children: [
               Container(
