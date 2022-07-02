@@ -7,11 +7,11 @@ part of 'drinkingInfo.dart';
 // **************************************************************************
 
 DrinkingInfo _$DrinkingInfoFromJson(Map<String, dynamic> json) => DrinkingInfo()
-  ..age = json['age'] as int?
-  ..height = json['height'] as double?
-  ..weight = json['weight'] as double?
-  ..drinkWaterToday = json['drinkWaterToday'] as double?
-  ..calories = json['calories'] as int?;
+  ..age = json['age'] as num
+  ..height = json['height'] as num
+  ..weight = json['weight'] as num
+  ..drinkWaterToday = json['drinkWaterToday'] as num
+  ..calories = json['calories'] as num;
 
 Map<String, dynamic> _$DrinkingInfoToJson(DrinkingInfo instance) =>
     <String, dynamic>{

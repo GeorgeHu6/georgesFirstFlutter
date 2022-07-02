@@ -39,8 +39,8 @@ class InfoDisplay extends StatefulWidget {
 }
 
 class _InfoDisplayState extends State<InfoDisplay> {
-  double? _todayWaterDrunk = 0;
-  int? _todayCalorios = 0;
+  num? _todayWaterDrunk = 0;
+  num? _todayCalorios = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -81,9 +81,9 @@ class InfoContent extends StatefulWidget {
 }
 
 class _InfoContent extends State<InfoContent> {
-  int? _age = 0;
-  double? _height = 0;
-  double? _weight = 0;
+  num? _age = 0;
+  num? _height = 0;
+  num? _weight = 0;
   var _score = 80;
   @override
   Widget build(BuildContext context) {
